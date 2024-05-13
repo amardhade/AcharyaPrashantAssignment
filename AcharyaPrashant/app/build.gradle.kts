@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.daggerHilt)
+    kotlin("kapt")
 }
 
 android {
@@ -13,7 +15,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
+        multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
@@ -63,6 +65,19 @@ dependencies {
     // Navigation
     implementation(libs.compose.navigation)
 
+    // Hilt
+    implementation(libs.hilt)
+    kapt(libs.hiltKapt)
+    // Hilt navigation / hiltViewModel
+    implementation(libs.hiltNavCompose)
+
+    // Retrofit
+    implementation(libs.rertrofit)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.interceptor)
+    implementation(libs.gson)
+
+    implementation(libs.multiDex)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

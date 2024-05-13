@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AcharyaPrashantAssignment</string>
+    <string name="prblm_connecting_with_server">Problem connectioning with server, please try after sometime.</string>
 </resources>
