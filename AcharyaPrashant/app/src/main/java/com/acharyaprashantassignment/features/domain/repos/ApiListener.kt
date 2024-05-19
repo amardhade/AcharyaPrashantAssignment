@@ -4,5 +4,5 @@ import com.acharyaprashantassignment.features.domain.Result
 
 interface ApiListener {
 
-    suspend fun fetchImages(): Result
+    suspend fun fetchImages(): Result<Any?>
 }

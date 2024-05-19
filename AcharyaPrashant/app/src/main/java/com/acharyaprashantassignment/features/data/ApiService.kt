@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface ApiService {
 
     @GET("content/misc/media-coverages?limit=100")
-    fun fetchImages(): Response<List<ImageDto>>
+    suspend fun fetchImages(): Response<List<ImageDto>>
 }
